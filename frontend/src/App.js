@@ -6,7 +6,7 @@ const App = () =>
   <>
 
     <Header />
-    <main style={ { minHeight: "93vh" } }></main>
+    <main style={ { minHeight: "85vh" } }></main>
     <Footer />
 
   </>
