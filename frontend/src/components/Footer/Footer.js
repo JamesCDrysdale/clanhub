@@ -6,8 +6,7 @@ const Footer = () => {
     <footer
         style={{
             width: "100%",
-            position: "relative",
-            bottom: 0,
+            marginTop: "50px",
             display: "flex",
             justifyContent: "center",
     }}>
