@@ -6234,6 +6234,17 @@ button.bg-secondary:hover {
 .bg-success {
   background-color: #28b62c !important;
 }
+.bg-JavaScript {
+  background-color: #F0DB4F !important;
+}
+.bg-Java {
+  background-color: #ED8B00  !important;
+  color: #fff !important;
+}
+.bg-Python {
+  background-color: #306998  !important;
+  color: #fff;
+}
 a.bg-success:focus,
 a.bg-success:hover,
 button.bg-success:focus,

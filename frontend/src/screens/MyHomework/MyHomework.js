@@ -19,12 +19,13 @@ const MyHomework = () => {
             <Button style={{ marginLeft: 10, marginBottom: 6 }} size="lg" >
                 New Homework Submission
             </Button>
+        </Link>
             {
                 homework.map(homework => (
                     <Card style={{ margin: 10 }}>
                         <Card.Header style={{ display: "flex" }}>
                             <span>{homework.timestamp}</span>
-                            <span>{homework.studentName}</span>
+                            {/* <span>{homework.studentName}</span> */}
                             <div>
                                 <Button href={`/note/${homework._id}`} >Edit</Button>
                                 <Button 
@@ -38,14 +39,14 @@ const MyHomework = () => {
                         </Card.Header>
                         <Card.Body>
                             <h4>
-                                <Badge bg='success'>
+                                <Badge bg={homework.category}>
                                     Category - {homework.category}
                                 </Badge>
                             </h4>
                             <blockquote className="blockquote mb-0">
                                 <ul>
                                     <li>
-                                        <strong>URL of GitHub Repo:</strong> {homework.urlOfGithubRepo}
+                                        <strong>URL of GitHub Repo:</strong> <a href={homework.urlOfGithubRepo} >{homework.urlOfGithubRepo}</a>
                                     </li>
                                     <li>
                                         <strong>How Challenging was this homework?</strong> {homework.howChallenging}
@@ -64,7 +65,7 @@ const MyHomework = () => {
                                     </li>
                                 </ul>
                                 <footer className="blockquote-footer">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                    Created on {homework.timestamp}
                                 </footer>
                             </blockquote>
                         </Card.Body>
@@ -72,7 +73,7 @@ const MyHomework = () => {
                 ))
             }
             
-        </Link>
+        
     </MainScreen>
   )
 }
