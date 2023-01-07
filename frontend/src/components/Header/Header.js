@@ -7,21 +7,28 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
         <Container>
-            <Navbar.Brand href="/">Homework Hub</Navbar.Brand>
+            <Navbar.Brand>
+                <Link to='/'>Homework Hub</Link>
+            </Navbar.Brand>
+            
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-auto">
-                    <Form inline>
+                    <Form>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                     </Form>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#Home">My Submissions</Nav.Link>
+                    <Nav.Link>
+                        <Link to='/myhomework'>My Submissions</Link>
+                    </Nav.Link>
+                    
                     <NavDropdown title="James Drysdale" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
                         <NavDropdown.Divider />
